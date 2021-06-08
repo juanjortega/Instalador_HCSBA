@@ -21,6 +21,7 @@ pip install decorator==v3.4.0
 pip install beautifulsoup4
 
 yum install http://repo.mybahmni.org/releases/ansible-2.4.6.0-1.el7.ans.noarch.rpm
+yum install http://repo.mybahmni.org.s3.amazonaws.com/rpm/bahmni/bahmni-installer-0.93-151.noarch.rpm
 
 # sacar setup y local del repositorio
 

@@ -37,3 +37,5 @@ sudo bahmni install
 sudo curl -L https://github.com/Lopior/Instalador/edit/main/email-notification.properties >> /opt/openmrs/email-notification.properties
 
 
+# modificar patient name regex de openmrs ^[a-zA-Zñáéíóúü \-]+$
+# modificar expresion en app.json en regustration.  "middleName" : {"pattern" : "[a-zA-Zñáéíóúü\\s]{0,}", "errorMessage" : "Should contain characters"},

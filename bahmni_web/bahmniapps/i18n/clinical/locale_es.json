@@ -203,8 +203,8 @@
     "OBS_BOOLEAN_YES_KEY":"Sí",
     "OBS_BOOLEAN_NO_KEY":"No",
     "CLINICAL_DUPLICATE_DIAGNOSIS_ERROR_MESSAGE" : "Corregir el diagnóstico duplicado ingresado",
-    "CLINICAL_TEMPLATE_ADDED_SUCCESS_KEY": "{{etiqueta}} agregado correctamente",
-    "CLINICAL_TEMPLATE_REMOVED_SUCCESS_KEY": "{{etiqueta}} eliminado correctamente",
+    "CLINICAL_TEMPLATE_ADDED_SUCCESS_KEY": "{{label}} agregado correctamente",
+    "CLINICAL_TEMPLATE_REMOVED_SUCCESS_KEY": "{{label}} eliminado correctamente",
     
     "CLINICAL_DIAGNOSIS_PRIMARY": "PRIMARIO",
     "CLINICAL_DIAGNOSIS_SECONDARY": "SECUNDARIO",
@@ -366,5 +366,5 @@
     "USE_KEY": "Usar",
     "ENTER_NOTES_MESSAGE": "Por favor ingrese sus notas aquí ...",
     "DURATION_KEY": "Duración",
-    "SAVE_KEY": "Salvar"
+    "SAVE_KEY": "Guardar"
 }

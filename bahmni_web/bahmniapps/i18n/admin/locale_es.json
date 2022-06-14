@@ -1,0 +1,21 @@
+{
+"userName": "Nombre de usuario",
+"password": "Clave",
+"location": "Ubicación",
+"login": "Acceso",
+"selectLocation": "Seleccionar ubicación",
+"clinical_key": "Clínico",
+"MESSAGE_DIALOG_OPTION_COPY": "Error de copia",
+"MESSAGE_DIALOG_OPTION_OKAY": "OK",
+"PRIVILEGE_REQUIRED": "El usuario inicia sesión pero no tiene el privilegio relevante",
+"FILTERS_HEADER_LABEL": "Filtros",
+"START_FROM_FILTER_LABEL": "Empezar desde",
+"USERNAME_FILTER_LABEL": "Nombre de usuario",
+"ENTER_USERNAME_PLACEHOLDER": "Introduzca su nombre de usuario",
+"PATIENT_ID_FILTER_LABEL": "ID del paciente",
+"ENTER_PATIENT_ID_PLACEHOLDER": "Ingrese la identificación del paciente",
+"FILTER_BUTTON_LABEL": "Filtrar",
+"AUDIT_LOG_TABLE_HEADER_LABEL": "Eventos de registro de auditoría",
+"NO_NAVIGATION_LINKS_AVAILABLE_MESSAGE": "No hay enlaces de navegación disponibles".
+"SELECT_VALUE_FROM_AUTOCOMPLETE_DEFAULT_MESSAGE": "Seleccione un valor de Auto Completar"
+}

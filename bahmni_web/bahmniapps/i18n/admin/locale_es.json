@@ -16,6 +16,6 @@
 "ENTER_PATIENT_ID_PLACEHOLDER": "Ingrese la identificación del paciente",
 "FILTER_BUTTON_LABEL": "Filtrar",
 "AUDIT_LOG_TABLE_HEADER_LABEL": "Eventos de registro de auditoría",
-"NO_NAVIGATION_LINKS_AVAILABLE_MESSAGE": "No hay enlaces de navegación disponibles".
+"NO_NAVIGATION_LINKS_AVAILABLE_MESSAGE": "No hay enlaces de navegación disponibles",
 "SELECT_VALUE_FROM_AUTOCOMPLETE_DEFAULT_MESSAGE": "Seleccione un valor de Auto Completar"
 }

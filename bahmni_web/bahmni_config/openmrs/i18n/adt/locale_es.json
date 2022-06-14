@@ -61,13 +61,13 @@
     "EDIT_LABEL": "Editar",
     "PATIENT_MOVEMENT_LABEL": "Movimiento del paciente",
     "PATIENT_MOVEMENT_SELECT_LABEL": "Seleccione",
-    "WARD_LIST_LABEL": "Lista de barrio",
+    "WARD_LIST_LABEL": "Lista de Sala",
     "TOTAL_BEDS_LABEL": "Camas totales",
     "AVAILABLE_BEDS_LABEL": "Camas disponibles",
     "BED_LABEL": "Cama",
     "ASSIGN_BED_LABEL": "Asignar",
     "TRANSFER_BED_LABEL": "Transferir",
-    "EMPTY_WARD_MESSAGE": "No hay pacientes en este barrio",
+    "EMPTY_WARD_MESSAGE": "No hay pacientes en esta Sala",
     
     
     "BEDMANAGEMENT_DISPOSITION_ADMIT_PATIENT": "Admitir Paciente",

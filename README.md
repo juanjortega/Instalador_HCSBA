@@ -38,4 +38,15 @@ sudo curl -L https://github.com/Lopior/Instalador/edit/main/email-notification.p
 
 
 # modificar patient name regex de openmrs ^[a-zA-Zñáéíóúü \-]+$
+
 # modificar expresion en app.json en regustration.  "middleName" : {"pattern" : "[a-zA-Zñáéíóúü\\s]{0,}", "errorMessage" : "Should contain characters"},
+
+#backup de bahmni. total
+
+ bahmni -i local backup --backup_type=all --options=all
+
+#restaurar bahmni
+#archivos quedan en /data/ y en /home/bahmni que deben ponerse a mano en maquina destino.
+
+bahmni -i local restore --restore_type=db --options=openmrs --strategy=dump   --restore_point=openmrs_dump_20170221084218.sql.gz
+

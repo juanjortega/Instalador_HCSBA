@@ -1,0 +1,19 @@
+Required setup
+Properties file:
+Create the erp.properties file in the application directory (usually ~/.OpenMRS/) and add the ERP connection details into it, as per the example below:
+
+erp.host=localhost
+erp.port=8069
+erp.user=admin
+erp.password=password
+erp.database=odoo
+The contents may vary with the ERP you are connecting to. You can find the properties details in the specific implementation file of ErpConnection.java for your ERP here.
+
+OpenMRS privilege:
+Ensure the OpenMRS user has the Get ERP objects OpenMRS privilege assigned.
+
+Privilege Management
+Privilege Name*	Get ERP objects
+Description	
+Allow to retrieve ERP objects from ERP API endpoints
+UUID	e76e44e9-024f-4259-8c90-dda5d10f6ca8

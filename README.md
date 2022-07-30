@@ -2,25 +2,30 @@
 
 sudo yum install -y https://kojipkgs.fedoraproject.org//packages/zlib/1.2.11/19.fc30/x86_64/zlib-1.2.11-19.fc30.x86_64.rpm
 
-sudo yum install epel-release
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 sudo yum install python-pip
 
 sudo pip install pip==v19.0
 
-sudo uninstall click
+pip install --upgrade pip
 
-sudo pip install click==v7.0
+pip install babel==v1.0 python-stdnum urllib3==1.21.1 idna==2.5 chardet==3.0.2 certifi==2017.4.17 qrcode pyserial pypdf python-chart psycogreen passlib ofxparse requests
 
-sudo pip install pyusb
+# sudo uninstall click
 
-sudo pip install babel==v0.9.6
+# sudo pip install click==v7.0
 
-sudo pip install decorator==v3.4.0
+# sudo pip install pyusb
 
-sudo pip install beautifulsoup4
+# sudo pip install babel==v0.9.6
 
-sudo yum install http://repo.mybahmni.org/releases/ansible-2.4.6.0-1.el7.ans.noarch.rpm
+# sudo pip install decorator==v3.4.0
+
+# sudo pip install beautifulsoup4
+
+# sudo yum install http://repo.mybahmni.org/releases/ansible-2.4.6.0-1.el7.ans.noarch.rpm
+
 sudo yum install http://repo.mybahmni.org.s3.amazonaws.com/rpm/bahmni/bahmni-installer-0.93-151.noarch.rpm
 
 # sacar setup y local del repositorio

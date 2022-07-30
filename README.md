@@ -30,7 +30,7 @@ sudo yum install http://repo.mybahmni.org.s3.amazonaws.com/rpm/bahmni/bahmni-ins
 
 # sacar setup y local del repositorio
 
-sudo wget https://raw.githubusercontent.com/Lopior/Instalador/edit/main/setup.yml  /etc/bahmni-installer/setup.yml
+sudo wget https://raw.githubusercontent.com/Lopior/Instalador/main/Setup.yml /etc/bahmni-installer/setup.yml
 
 sudo wget https://raw.githubusercontent.com/Lopior/Instalador/main/local  /etc/bahmni-installer/local
 

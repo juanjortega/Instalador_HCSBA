@@ -37,7 +37,11 @@ sudo wget https://raw.githubusercontent.com/Lopior/Instalador/main/local  /etc/b
 echo "export BAHMNI_INVENTORY=local" >> ~/.bashrc
 source ~/.bashrc
 
-sudo bahmni install 
+yum install http://mirror.centos.org/centos/7/extras/x86_64/Packages/centos-release-scl-rh-2-3.el7.centos.noarch.rpm
+yum install https://rpmfind.net/linux/centos/7.9.2009/extras/x86_64/Packages/centos-release-scl-2-3.el7.centos.noarch.rpm
+
+
+sudo bahmni -i local install 
 
 sudo curl -L https://github.com/Lopior/Instalador/edit/main/email-notification.properties >> /opt/openmrs/email-notification.properties
 
@@ -55,5 +59,4 @@ sudo curl -L https://github.com/Lopior/Instalador/edit/main/email-notification.p
 
 bahmni -i local restore --restore_type=db --options=openmrs --strategy=dump   --restore_point=openmrs_dump_20170221084218.sql.gz
 
-http://mirror.centos.org/centos/7/extras/x86_64/Packages/centos-release-scl-rh-2-3.el7.centos.noarch.rpm
 

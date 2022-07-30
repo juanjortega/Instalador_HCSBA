@@ -7,5 +7,7 @@ implementation_name: default
 selinux_state: disabled
 mysql_root_password: Lopior.123,
 mysql_old_root_password: Lopior.123,
-openerp_url: http://35.238.251.14:8069
-bahmni_repo_url: http://repo.mybahmni.org.s3-website-ap-southeast-1.amazonaws.com/rpm/bahmni/
+openerp_url: http://10.100.100.52:8069
+# bahmni_repo_url: http://repo.mybahmni.org.s3-website-ap-southeast-1.amazonaws.com/rpm/bahmni/
+bahmni_repo_url: https://repo.mybahmni.org/releases/
+

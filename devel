@@ -1,0 +1,108 @@
+yum install git
+yum install rh-ruby23 rh-ruby23-ruby-devel
+scl enable rh-ruby23 'gem install fpm'
+scl enable rh-ruby23 'fpm --version'
+scl enable rh-ruby23 'gem install ffi'
+scl enable rh-ruby23 'ffi --version'
+
+
+yum install centos-release-scl-rh centos-release-scl
+
+next install the right version 
+
+yum --enablerepo=centos-sclo-rh  install rh-ruby26
+
+yum install rh-ruby26 rh-ruby26-ruby-devel
+
+then enable ruby2.6 in bash
+
+scl enable rh-ruby26 bash
+
+If you would like the change to be permanent (the change still persists after you log out and log back in)
+
+you can edit your $HOME/.bashrc file to include the following line:
+
+source scl_source enable rh-ruby26 
+
+to verify if ruby 2.6 is installed properly or not:  
+
+ruby --version
+ruby 2.6.2p47 (2019-03-13 revision 67232)
+
+
+
+
+gem install compass # you may need to use sudo to install Ruby gem compass ...
+
+
+mkdir /Projects
+mkdir /Projects/bahmni
+
+cd /Projects/bahmni
+# clone the default configuration (some folks may choose their project specific config like jss-config)
+git clone https://github.com/Bahmni/default-config.git
+# clone Bahmni EMR UI project
+git clone https://github.com/Bahmni/openmrs-module-bahmniapps.git
+# clone the Bahmni Core backend project
+git clone https://github.com/Bahmni/bahmni-core.git
+# clone the common java utils used across the project
+git clone https://github.com/Bahmni/bahmni-java-utils.git
+
+
+
+--
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+nvm install 10
+nvm use 10
+
+
+npm install --global yarn
+
+
+
+
+Prepare and Build Bahmni EMR UI
+The following commands will build the Bahmni EMR UI application. Make sure yarn have been installed on your machine as mentioned on top of this document.
+
+# Go into the UI directory
+cd openmrs-module-bahmniapps/ui
+ 
+# Install dependencies (Installed node dependencies into node_modules. UI dependencies are installed in node_modules/@bower_components and create a soft link to app/components).
+yarn install
+ 
+# Run tests, and check test coverage (required before the next step)
+yarn clean test --force
+ 
+# Build the application (into dist folder)
+yarn default --force  
+
+
+
+
+Linking EMR UI folders
+Linking EMR UI to vagrant
+# Do this from inside the vagrant box (use 'vagrant ssh' to enter it)
+ 
+# WARNING DO THIS ONLY IF YOU HAVE COMPILED THE UI CODE ALREADY ON YOUR MACHINE. ELSE YOUR EMR UI WON'T WORK
+# IF YOU ARE ONLY DOING IMPLEMENTATION SPECIFIC UI CHANGES, THEN MAYBE YOU ONLY NEED TO LINK THE CONFIG FOLDER
+# AND NOT THE bahmniapps FOLDER. IF YOU ARE UNSURE, PLEASE ASK SOMEONE FROM BAHMNI COMMUNITY.
+ 
+# rename the original folder for backup
+sudo mv /var/www/bahmniapps /var/www/bahmniapps-original
+ 
+# (Option 1 - Simple) Create a link to your UI 'dist' folder
+# - run the 'yarn default' build command (from your dev machine) to see your changes reflected
+sudo ln -s /Projects/bahmni/openmrs-module-bahmniapps/ui/dist/ /var/www/bahmniapps
+ 
+# (Option 2 - Advanced) Create a link to your UI 'app' folder
+# - changes to HTML and JS files will be reflected immediately
+# - run the 'yarn compass' command (from your dev machine) to see CSS changes reflected
+sudo ln -s /Projects/bahmni/openmrs-module-bahmniapps/ui/app /var/www/bahmniapps
+  
+# Make the user bahmni owner of this new link
+sudo chown -h bahmni:bahmni /var/www/bahmniapps
+

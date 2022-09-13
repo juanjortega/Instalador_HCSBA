@@ -1,72 +1,73 @@
-localhost ansible_connection=local
+192.168.255.23 ansible_user=root ansible_private_key_file=/root/.ssh/id_rsa
+192.168.255.24 ansible_user=root ansible_private_key_file=/root/.ssh/id_rsa
 
 [nagios-server]
-
+192.168.255.23
 
 [bahmni-emr]
-localhost
+192.168.255.23
 
 [bahmni-emr-db]
-localhost
+192.168.255.24
 
 [bahmni-emr-db-slave]
 
 [bahmni-erp]
-localhost
+192.168.255.23
 
 [bahmni-erp-db]
-localhost
+192.168.255.24
 
 [bahmni-erp-db-slave]
 
 [bahmni-lab]
-localhost
+192.168.255.23
 
 [bahmni-lab-db]
-localhost
+192.168.255.24
 
 [bahmni-lab-db-slave]
 
 [bahmni-reports]
-localhost
+192.168.255.23
 
 [bahmni-reports-db]
-localhost
+192.168.255.24
 
 [bahmni-reports-db-slave]
 
 [atomfeed-console]
-localhost
+192.168.255.23
 
 [pacs-integration]
-localhost
+192.168.255.23
 
 [pacs-integration-db]
-localhost
+192.168.255.24
 
 [pacs-integration-db-slave]
 
 [dcm4chee]
-localhost
+192.168.255.23
 
 [dcm4chee-db]
-localhost
+192.168.255.24
 
 [dcm4chee-db-slave]
 
 [bahmni-event-log-service]
-localhost 
+192.168.255.23
 
 [bahmni-offline]
 
 [mysql-backup-tool]
-localhost
+192.168.255.24
 
 [postgres-backup-tool]
-localhost
+192.168.255.24
 
 [bahmni-backup-artifacts]
-localhost
+192.168.255.23
 
 [local:children]
 nagios-server
